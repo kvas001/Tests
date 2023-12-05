@@ -1,4 +1,4 @@
-# Task: Super cloud AI Revolution
+### Task: Super cloud AI Revolution
 
 Stable Diffusion: Easy Diffusion v3.0.6
 
