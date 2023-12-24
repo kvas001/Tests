@@ -1,0 +1,43 @@
+body{
+	background-color: #A0A0A0;
+	color: #FCFCFC;
+	font-size: large;
+}
+a {
+	color: #404040;
+}
+.deb {border: thin dashed red;}
+#wind {
+	max-width: 1040px;
+	background-color: lightyellow;
+/* 	position:relative; */
+/* 	padding-bottom:10px; */
+}
+#head1 {background-color: #808080; text-align: center;}
+#menu1 {background-color: #B0B0B0; padding: 5px 2px; 
+	width: 240px;}
+#main  {width: calc(100% - 260px); padding: 10px 5px;  }
+.cntr {
+	margin-left: auto;
+	margin-right: auto;
+}
+.rt {
+/*	font-weight: bold; */
+	float: right;
+	text-align: center;
+}
+.lt {
+	float: left;
+}
+
+#bott {
+	position:absolute;
+	bottom: 10px; }
+
+
+/* ----------------------------- */
+
+
+
+
+
