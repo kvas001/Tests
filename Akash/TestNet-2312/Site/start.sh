@@ -9,5 +9,5 @@ service nginx start
 sleep 5
 rm /var/www/html/index.nginx-debian.html
 cd /var/www/html/
-# git clone https://github.com/PavloDereniuk/Launch-a-website-on-Akash-Network-in-2-minutes .
 git clone https://github.com/kvas001/Site-Tools .
+# git pull
