@@ -34,9 +34,9 @@ profiles:
         cpu:
           units: 0.5
         memory:
-          size: 1Gi
+          size: 0.5Gi
         storage:
-          size: 2Gi
+          size: 0.5Gi
          
   placement:
     akash: 
