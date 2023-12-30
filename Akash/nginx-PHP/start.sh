@@ -10,12 +10,12 @@ echo ${my_root_password}
 # ww
 source $HOME/.bashrc
 # apt-get install -y sudo nano wget tar zip unzip jq ssh git
-RUN apk add --update --no-cache openssh 
-RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
+apk add --update --no-cache openssh 
+echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 # RUN adduser -h /home/root -s /bin/sh -D root
-RUN echo -n 'root:${my_root_password}' | chpasswd
+echo -n 'root:${my_root_password}' | chpasswd
 # ENTRYPOINT ["/entrypoint.sh"]
-EXPOSE 22
+# EXPOSE 22
 # COPY entrypoint.sh /
 service sshd start
 # service nginx start
