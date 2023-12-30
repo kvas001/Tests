@@ -8,8 +8,8 @@ echo ${my_root_password}
 apk add --update --no-cache openssh bash git
 #source $HOME/.bashrc
 apk add bash
-apk add gcompat libstdc++ curl git
-apk add grep dropbear-scp dropbear-ssh
+apk add gcompat libstdc++
+#apk add grep dropbear-scp dropbear-ssh
 echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 echo 'AllowTcpForwarding yes' >> /etc/ssh/sshd_config
 # RUN adduser -h /home/root -s /bin/sh -D root
