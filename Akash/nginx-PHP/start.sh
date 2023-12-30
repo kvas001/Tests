@@ -5,7 +5,7 @@ echo $HOME
 echo ${my_root_password}
 # apt-get install -y sudo nano wget tar zip unzip jq ssh git
 # SSH
-#apk add --update --no-cache openssh bash git
+apk add --update --no-cache openssh bash git
 #source $HOME/.bashrc
 apk add bash
 apk add gcompat libstdc++ curl git
