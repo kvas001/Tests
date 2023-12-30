@@ -8,18 +8,18 @@ echo ${my_root_password}
 # rc-update add sshd
 # service sshd start
 # ww
+apk add --update --no-cache openssh bash
 source $HOME/.bashrc
 # apt-get install -y sudo nano wget tar zip unzip jq ssh git
-apk add --update --no-cache openssh 
 echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 # RUN adduser -h /home/root -s /bin/sh -D root
 echo -n 'root:${my_root_password}' | chpasswd
 # ENTRYPOINT ["/entrypoint.sh"]
 # EXPOSE 22
 # COPY entrypoint.sh /
+sleep 5
 service sshd start
 # service nginx start
-sleep 5
 # rm /var/www/html/index.nginx-debian.html
 # cd /var/www/html/
 # git clone https://github.com/name/repo .
