@@ -4,10 +4,10 @@ echo $OSTYPE
 echo $HOME
 echo ${my_root_password}
 # SSH
-# apk add bash openssh git
+# apk add bash openssh
 # rc-update add sshd
 # service sshd start
-apk add --update --no-cache openssh bash
+apk add --update --no-cache openssh bash git
 source $HOME/.bashrc
 # apt-get install -y sudo nano wget tar zip unzip jq ssh git
 echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
