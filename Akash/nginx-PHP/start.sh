@@ -4,10 +4,9 @@ echo $OSTYPE
 echo $HOME
 echo ${my_root_password}
 # SSH
-# apk add bash openssh
+# apk add bash openssh git
 # rc-update add sshd
 # service sshd start
-# ww
 apk add --update --no-cache openssh bash
 source $HOME/.bashrc
 # apt-get install -y sudo nano wget tar zip unzip jq ssh git
@@ -18,6 +17,7 @@ echo -n 'root:${my_root_password}' | chpasswd
 # EXPOSE 22
 # COPY entrypoint.sh /
 sleep 5
+rc-update add sshd
 service sshd start
 # service nginx start
 # rm /var/www/html/index.nginx-debian.html
