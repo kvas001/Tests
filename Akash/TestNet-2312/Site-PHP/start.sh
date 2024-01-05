@@ -10,7 +10,7 @@ apt-get install -y php php-cli php-fpm php-json php-common php-mysql php-zip php
 service nginx start
 sleep 5
 
-rm /var/www/html/index.html
+#rm /var/www/html/index.html
 cd /var/www/html/
 git clone https://github.com/kvas001/Site-tst .
 ## git pull
