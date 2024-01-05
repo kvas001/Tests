@@ -14,9 +14,13 @@ service php7.4-fpm start
 # end php
 service nginx start
 sleep 5
-
 rm /var/www/html/index.nginx-debian.html
 rm /var/www/html/index.html
-cd /var/www/html/
-git clone https://github.com/kvas001/Site-tst .
+## ИЛИ
+#cd /var/www/html/
+#git clone https://github.com/kvas001/Site-tst .
 ## git pull
+## ИЛИ
+echo '<head><meta charset="utf-8"><title>info</title></head>PHP-info: <a href="phpinfo.php">открыть</a>' > /var/www/html/index.html
+echo '<?php phpinfo(); ?>' > /var/www/html/phpinfo.php
+## конец ИЛИ
