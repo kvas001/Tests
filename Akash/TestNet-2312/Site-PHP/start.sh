@@ -24,3 +24,12 @@ rm /var/www/html/index.html
 echo '<head><meta charset="utf-8"><title>info</title></head>PHP-info: <a href="phpinfo.php">открыть</a>' > /var/www/html/index.html
 echo '<?php phpinfo(); ?>' > /var/www/html/phpinfo.php
 ## конец ИЛИ
+sed -i '/location ~ \\.php$ {/s/#//' /etc/nginx/sites-available/default
+sed -i '/include snippets\/fastcgi-php.conf;/s/#//' /etc/nginx/sites-available/default
+sed -i '/fastcgi_pass unix:\/var\/run\/php/s/#//' /etc/nginx/sites-available/default
+sed -i '/fastcgi_pass unix:\/var\/run\/php/s/.sock;/.sock;}/' /etc/nginx/sites-available/default
+
+sed -i '/location ~ \/\\.ht {/s/#//' /etc/nginx/sites-available/default
+sed -i '/deny all;/s/#//' /etc/nginx/sites-available/default
+sed -i '/deny all;/s/deny all;/deny all;}/' /etc/nginx/sites-available/default
+service nginx restart
