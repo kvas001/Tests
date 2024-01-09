@@ -28,7 +28,7 @@ rm /var/www/html/index.html
 #git clone https://github.com/kvas001/Site-tst .
 ## git pull
 ## ИЛИ
-echo '<head><meta charset="utf-8"><title>info</title></head>PHP-info: <a href="phpinfo.php">открыть</a>' > /var/www/html/index.html
+echo '<head><meta charset="utf-8"><title>info</title></head>PHP-info: <a href="phpinfo.php">открыть</a>' > /var/www/html/index.php
 echo '<?php phpinfo(); ?>' > /var/www/html/phpinfo.php
 ## конец ИЛИ
 
