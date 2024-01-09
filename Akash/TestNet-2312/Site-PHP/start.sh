@@ -19,6 +19,7 @@ sed -i '/fastcgi_pass unix:\/var\/run\/php/s/.sock;/.sock;}/' /etc/nginx/sites-a
 sed -i '/location ~ \/\\.ht {/s/#//' /etc/nginx/sites-available/default
 sed -i '/deny all;/s/#//' /etc/nginx/sites-available/default
 sed -i '/deny all;/s/deny all;/deny all;}/' /etc/nginx/sites-available/default
+sed -i '/index index.html/s/index.nginx-debian.html/index.php/' /etc/nginx/sites-available/default
 service nginx start
 sleep 5
 rm /var/www/html/index.nginx-debian.html
